@@ -14,10 +14,10 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Set up Docker Buildx
-        uses: mj4w/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v3
 
       - name: Build and push Docker images
-        uses: mj4w/build-push-action@v6.16.0
+        uses: docker/build-push-action@v6.16.0
         with:
           platforms: linux/amd64,linux/arm64
           push: true
